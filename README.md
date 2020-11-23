@@ -54,7 +54,7 @@ When making a [service method](https://docs.feathersjs.com/api/services.html) ca
 
 You can utilized a [MongoDB Transactions](https://docs.mongodb.com/manual/core/transactions/) by passing a `session` with the `params.mongodb`:
 
-```
+```js
 import { ObjectID } from 'mongodb'
 
 export default async app => {
@@ -74,7 +74,7 @@ export default async app => {
               },
               { mongodb: { session } },
             )
-            app.service('banService').create(
+            app.service('barService').create(
               {
                 ...data,
                 _id: barID
